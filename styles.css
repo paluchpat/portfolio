@@ -76,39 +76,14 @@ body::before {
   min-height: 80px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-.brand {
-  text-decoration: none;
-  color: var(--text);
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.brand-mark {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid var(--line);
-  display: grid;
-  place-items: center;
-  font-weight: 800;
-  letter-spacing: -0.05em;
-  background: linear-gradient(135deg, var(--accent-deep), var(--bg-elevated));
-}
-
-.brand-text {
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  justify-content: center;
 }
 
 .main-nav {
   display: flex;
   align-items: center;
   gap: 36px;
+  justify-content: center;
 }
 
 .nav-link {
