@@ -12,17 +12,17 @@
   --text-soft: #bfddea;
   --text-muted: #95b9cb;
   --text-faint: #7898a9;
-  --line: rgba(255,255,255,0.12);
-  --line-soft: rgba(255,255,255,0.06);
+  --line: rgba(255, 255, 255, 0.12);
+  --line-soft: rgba(255, 255, 255, 0.06);
   --panel: #122b38;
   --panel-2: #1a3544;
-  --accent: #4FC3F7;
-  --accent-bright: #4FC3F7;
+  --accent: #4fc3f7;
+  --accent-bright: #4fc3f7;
   --accent-deep: #2b8fb8;
   --sage: #a6eaff;
   --sand: #eef1f5;
   --clay: #b1936a;
-  --shadow: rgba(0,0,0,0.24);
+  --shadow: rgba(0, 0, 0, 0.24);
   --max-width: 1240px;
 }
 
@@ -33,21 +33,25 @@ html {
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: "Inter", Arial, sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
   line-height: 1.85;
   overflow-x: hidden;
 }
 
 body::before {
-  content: "";
+  content: '';
   pointer-events: none;
   position: fixed;
   inset: -12%;
   background-image:
-    radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px),
-    radial-gradient(circle, rgba(117,185,225,0.10) 1px, transparent 1px);
-  background-position: 0 0, 22px 22px;
-  background-size: 38px 38px, 38px 38px;
+    radial-gradient(circle, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    radial-gradient(circle, rgba(117, 185, 225, 0.1) 1px, transparent 1px);
+  background-position:
+    0 0,
+    22px 22px;
+  background-size:
+    38px 38px,
+    38px 38px;
   opacity: 0.9;
   z-index: -1;
 }
@@ -153,8 +157,16 @@ body::before {
   align-items: center;
   padding: 88px 0 90px;
   background:
-    radial-gradient(circle at 78% 12%, rgba(117,185,225,0.20), transparent 28%),
-    radial-gradient(circle at 95% 80%, rgba(255,255,255,0.06), transparent 30%);
+    radial-gradient(
+      circle at 78% 12%,
+      rgba(117, 185, 225, 0.2),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 95% 80%,
+      rgba(255, 255, 255, 0.06),
+      transparent 30%
+    );
 }
 
 .hero-grid {
@@ -192,7 +204,7 @@ body::before {
 .hero h1 {
   max-width: 780px;
   margin-top: 24px;
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-weight: 600;
   font-size: clamp(3.8rem, 7vw, 6rem);
   line-height: 0.94;
@@ -268,7 +280,7 @@ body::before {
 
 .hero-social-proof .metric-number {
   display: block;
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 2rem;
   line-height: 1;
 }
@@ -287,7 +299,11 @@ body::before {
 }
 
 .glass-panel {
-  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.02)
+  );
   border: 1px solid var(--line);
   border-radius: 28px;
   backdrop-filter: blur(14px);
@@ -300,12 +316,12 @@ body::before {
 }
 
 .profile-card::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 280px;
   height: 280px;
   border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   right: -80px;
   top: -70px;
 }
@@ -318,7 +334,7 @@ body::before {
 
 .profile-header h2 {
   margin-top: 12px;
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 600;
   font-size: 2rem;
 }
@@ -339,7 +355,7 @@ body::before {
   height: 9px;
   border-radius: 50%;
   background: #96c6ee;
-  box-shadow: 0 0 0 4px rgba(117,185,225,0.24);
+  box-shadow: 0 0 0 4px rgba(117, 185, 225, 0.24);
 }
 
 .profile-visual {
@@ -353,12 +369,12 @@ body::before {
 }
 
 .portrait-frame::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 360px;
   height: 360px;
   border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   inset: -20px;
 }
 
@@ -366,9 +382,9 @@ body::before {
   width: 330px;
   height: 330px;
   border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.36);
+  border: 1px solid rgba(255, 255, 255, 0.36);
   background:
-    linear-gradient(120deg, transparent 20%, rgba(226,244,255,0.18)),
+    linear-gradient(120deg, transparent 20%, rgba(226, 244, 255, 0.18)),
     radial-gradient(circle at 50% 40%, #395e81, #203a4c);
   display: grid;
   place-items: center;
@@ -377,7 +393,7 @@ body::before {
 }
 
 .portrait-image::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: -5%;
   border-radius: 50%;
@@ -388,11 +404,11 @@ body::before {
 }
 
 .portrait-image::after {
-  content: "";
+  content: '';
   position: absolute;
   inset: 24px;
   border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.45);
+  border: 1px solid rgba(255, 255, 255, 0.45);
 }
 
 .profile-initials {
@@ -458,7 +474,7 @@ body::before {
 
 .section-title {
   margin-top: 12px;
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.05;
   letter-spacing: -0.04em;
@@ -559,7 +575,7 @@ body::before {
 
 .value-number {
   color: var(--accent-bright);
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1rem;
 }
 
@@ -574,7 +590,7 @@ body::before {
 }
 
 .experience-section {
-  background: linear-gradient(180deg, rgba(255,255,255,0.03), transparent);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent);
 }
 
 .timeline {
@@ -647,7 +663,7 @@ body::before {
   font-size: 0.69rem;
   padding: 8px 14px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.04);
+  background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--line-soft);
 }
 
@@ -671,8 +687,12 @@ body::before {
 }
 
 .featured-card {
-  background: linear-gradient(180deg, rgba(117,185,225,0.18), rgba(255,255,255,0.02));
-  border-color: rgba(117,185,225,0.58);
+  background: linear-gradient(
+    180deg,
+    rgba(117, 185, 225, 0.18),
+    rgba(255, 255, 255, 0.02)
+  );
+  border-color: rgba(117, 185, 225, 0.58);
 }
 
 .card-top {
@@ -695,7 +715,7 @@ body::before {
 
 .work-card h3 {
   margin-top: 40px;
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.46rem;
 }
 
@@ -727,7 +747,7 @@ body::before {
 
 .mini-stats span {
   display: block;
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-size: 2rem;
 }
 
@@ -810,7 +830,7 @@ body::before {
 
 .bar-track {
   height: 8px;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 999px;
   border: 1px solid var(--line-soft);
 }
@@ -835,7 +855,11 @@ body::before {
 .contact-panel {
   border-radius: 28px;
   border: 1px solid var(--line);
-  background: linear-gradient(120deg, rgba(117,185,225,0.16), rgba(255,255,255,0.03));
+  background: linear-gradient(
+    120deg,
+    rgba(117, 185, 225, 0.16),
+    rgba(255, 255, 255, 0.03)
+  );
   padding: 58px 62px;
   display: flex;
   align-items: center;
