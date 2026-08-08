@@ -28,6 +28,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 60px;
 }
 
 body {
@@ -57,10 +58,10 @@ body::before {
 }
 
 .container {
-  width: min(100%, var(--max-width));
-  margin: 0 auto;
-  padding-left: 24px;
-  padding-right: 24px;
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: 24px;
 }
 
 .site-header {
@@ -146,9 +147,18 @@ body::before {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(640px, 1.08fr) minmax(410px, 0.92fr);
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
   gap: 56px;
   align-items: center;
+}
+
+.hero-copy,
+.hero-panel,
+.about-section .two-column > *,
+.systems-section .systems-grid > *,
+.timeline-content,
+.contact-panel > * {
+  min-width: 0;
 }
 
 .hero-copy {
@@ -344,21 +354,23 @@ body::before {
 
 .portrait-frame {
   position: relative;
+  width: min(330px, calc(100% - 40px));
+  aspect-ratio: 1;
 }
 
 .portrait-frame::before {
   content: '';
   position: absolute;
-  width: 360px;
-  height: 360px;
+  width: calc(100% + 40px);
+  height: calc(100% + 40px);
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.2);
   inset: -20px;
 }
 
 .portrait-image {
-  width: 330px;
-  height: 330px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.36);
   background:
@@ -436,6 +448,7 @@ body::before {
 
 .section {
   padding: 0 0 96px;
+  scroll-margin-top: 60px;
 }
 
 .section-head {
@@ -460,7 +473,7 @@ body::before {
 
 .about-section .two-column {
   display: grid;
-  grid-template-columns: minmax(560px, 0.96fr) minmax(420px, 0.88fr);
+  grid-template-columns: minmax(0, 0.96fr) minmax(0, 0.88fr);
   gap: 54px;
   align-items: center;
 }
@@ -577,7 +590,7 @@ body::before {
 
 .timeline-item {
   display: grid;
-  grid-template-columns: 160px minmax(640px, 1fr);
+  grid-template-columns: 160px minmax(0, 1fr);
   gap: 30px;
   padding: 40px 0;
   border-top: 1px solid var(--line-soft);
@@ -747,7 +760,7 @@ body::before {
 
 .systems-section .systems-grid {
   display: grid;
-  grid-template-columns: minmax(560px, 0.96fr) minmax(420px, 0.84fr);
+  grid-template-columns: minmax(0, 0.96fr) minmax(0, 0.84fr);
   gap: 54px;
   align-items: center;
 }
@@ -916,7 +929,11 @@ body::before {
   }
 
   .hero h1 {
-    font-size: clamp(2.82rem, 12vw, 4.2rem);
+    max-width: 100%;
+    font-size: clamp(2.05rem, 9.4vw, 2.9rem);
+    line-height: 1.02;
+    overflow-wrap: anywhere;
+    text-wrap: balance;
   }
 
   .hero-copy {
@@ -952,6 +969,24 @@ body::before {
 }
 
 @media (max-width: 700px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .container {
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+    padding-inline: 20px;
+  }
+
+  .nav-wrapper {
+    position: relative;
+    justify-content: center;
+  }
+
   .main-nav {
     position: fixed;
     top: 80px;
@@ -977,14 +1012,17 @@ body::before {
 
   .nav-toggle {
     display: inline-flex;
+    margin-inline: auto;
   }
 
   .hero {
     min-height: auto;
+    background: none;
   }
 
   .section {
     padding: 0 0 54px;
+    scroll-margin-top: 48px;
   }
 
   .hero-social-proof {
@@ -995,6 +1033,12 @@ body::before {
     width: 100%;
     justify-items: center;
     text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    font-size: 0.98rem;
+    line-height: 1.72;
   }
 
   .section-head {
