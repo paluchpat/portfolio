@@ -975,7 +975,7 @@ body::before {
   .contact-panel {
     align-items: start;
     flex-direction: column;
-    padding: 34px 22px;
+    padding: 40px 26px;
   }
 }
 
@@ -1076,5 +1076,9 @@ body::before {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+  }
+
+  .contact-section {
+    padding-top: 40px;
   }
 }
