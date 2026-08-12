@@ -745,7 +745,19 @@ body::before {
 .mini-stats span {
   display: block;
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
+  font-size: 1.18rem;
+  line-height: 1.2;
+}
+
+.mini-stats .mini-stat-followup {
+  margin-top: 22px;
+}
+
+.mini-stats h3 {
+  margin-top: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.18rem;
+  line-height: 1.2;
 }
 
 .mini-stats small {
@@ -859,9 +871,9 @@ body::before {
   );
   padding: 58px 62px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
 }
 
 .contact-panel p {
