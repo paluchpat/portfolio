@@ -4,6 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pat (Kamil) Paluch | Staff Software Engineer</title>
+    <meta
+      name="description"
+      content="Pat (Kamil) Paluch is a Staff Software Engineer with 16+ years of experience building AI-powered creation platforms, publisher monetization systems, and interactive advertising tools at BuzzFeed and Complex Networks."
+    />
+    <meta name="author" content="Pat (Kamil) Paluch" />
+    <link rel="canonical" href="https://patpaluch.com/" />
+    <meta name="theme-color" content="#0d1b2a" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Pat (Kamil) Paluch | Staff Software Engineer" />
+    <meta
+      property="og:description"
+      content="Staff Software Engineer building AI-powered creation platforms, publisher monetization systems, and interactive advertising tools."
+    />
+    <meta property="og:url" content="https://patpaluch.com/" />
+    <meta property="og:image" content="https://patpaluch.com/assets/avatar.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Pat (Kamil) Paluch | Staff Software Engineer" />
+    <meta
+      name="twitter:description"
+      content="Staff Software Engineer building AI-powered creation platforms, publisher monetization systems, and interactive advertising tools."
+    />
+    <meta name="twitter:image" content="https://patpaluch.com/assets/avatar.png" />
+
+    <link rel="icon" href="assets/avatar.png" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,11 +37,24 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Pat (Kamil) Paluch",
+        "jobTitle": "Staff Software Engineer",
+        "url": "https://patpaluch.com/",
+        "image": "https://patpaluch.com/assets/avatar.png",
+        "email": "mailto:paluchpat@gmail.com",
+        "sameAs": ["https://www.linkedin.com/in/pat-paluch"]
+      }
+    </script>
   </head>
   <body>
     <header class="site-header">
       <div class="container nav-wrapper">
-        <nav class="main-nav" aria-label="Primary">
+        <nav id="primary-navigation" class="main-nav" aria-label="Primary">
           <a href="#about" class="nav-link">About</a>
           <a href="#experience" class="nav-link">Experience</a>
           <a href="#work" class="nav-link">Work</a>
@@ -23,7 +62,13 @@
           <a href="#contact" class="nav-link nav-cta">Contact</a>
         </nav>
 
-        <button class="nav-toggle" aria-label="Open navigation">
+        <button
+          type="button"
+          class="nav-toggle"
+          aria-label="Open navigation"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
           <span></span>
           <span></span>
         </button>
@@ -37,7 +82,7 @@
             <span></span>
             Staff Software Engineer
           </div>
-          <h1>Engineering products that turn ideas into experiences.</h1>
+          <h1>Engineering systems that turn AI prompts into shipped products.</h1>
           <p class="hero-text">
             Staff Software Engineer with over 16 years of experience designing
             and building scalable web applications, developer platforms,
@@ -60,12 +105,12 @@
               </div>
               <span class="status-dot">
                 <span></span>
-                Available
+                Open to Work
               </span>
             </div>
 
             <div class="profile-visual">
-              <div class="portrait-frame">
+              <div class="portrait-frame" aria-hidden="true">
                 <div class="portrait-image">
                   <div class="portrait-orbit orbit-one"></div>
                   <div class="portrait-orbit orbit-two"></div>
@@ -244,7 +289,7 @@
                 <span>AI Builder Architecture</span>
                 <span>Canvas &amp; JSON Systems</span>
                 <span>LLM Product Infrastructure</span>
-                <span>Ad Tools &amp; BAM Integration</span>
+                <span>Ad Tools &amp; Campaign Delivery</span>
                 <span>Chatbot Experiences</span>
                 <span>Technical Leadership</span>
               </div>
@@ -452,8 +497,8 @@
             <p>
               Defined and rebuilt the tooling used by engineering, RevTech, and
               AdOps to manage, preview, package, and deploy custom campaigns.
-              The platform was designed around the actual BAM workflow instead
-              of a generic CMS model.
+              The platform was designed around BuzzFeed&rsquo;s actual
+              campaign delivery workflow instead of a generic CMS model.
             </p>
             <div class="mini-stats">
               <span>Video.js</span>
@@ -471,11 +516,30 @@
             <p>
               Led the launch of the AI Quiz UI under a compressed timeline,
               evolving a proof of concept into four production quiz experiences
-              and a foundation other engineers used for later AI products.
+              and a foundation other engineers used for later AI products. Later
+              shipped the unplanned, high-priority Drake AI Filter in 2.5 days
+              &mdash; a launch that went viral.
             </p>
             <div class="mini-stats">
               <span>LLM</span>
               <small>Streaming, token handling, and guided chat flows</small>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="card-top">
+              <span class="project-type">Client AI Experience</span>
+            </div>
+            <h3>Sprite &mdash; 50 Years of Hip Hop</h3>
+            <p>
+              Built a branded ChatGPT experience for Sprite&rsquo;s 50 Years of
+              Hip Hop campaign against shifting brand guardrails, continually
+              refining the prompt to deliver an open-ended conversation about
+              hip hop history that could never name a musical artist directly.
+            </p>
+            <div class="mini-stats">
+              <span>Prompt Engineering</span>
+              <small>Iterative guardrails against a strict brand constraint</small>
             </div>
           </article>
 
@@ -515,6 +579,38 @@
               <small>Published Android apps</small>
               <span class="mini-stat-followup">1</span>
               <small>iOS app</small>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="card-top">
+              <span class="project-type">Freelance / Boutique Retail</span>
+            </div>
+            <h3>Zingale &amp; Co.</h3>
+            <p>
+              Designed, coded, and SEO-optimized zingaleco.com, a fully
+              responsive jewelry boutique site built cross-browser and
+              cross-device from the ground up for an independent retailer.
+            </p>
+            <div class="mini-stats">
+              <span>SEO</span>
+              <small>Performance and search optimization for a small business</small>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="card-top">
+              <span class="project-type">E-Commerce</span>
+            </div>
+            <h3>SquareWine</h3>
+            <p>
+              Built a full e-commerce store for SquareWine, a local wine shop,
+              handling product catalog, checkout, and store operations end to
+              end as a solo developer.
+            </p>
+            <div class="mini-stats">
+              <span>Full-Stack</span>
+              <small>Catalog, checkout, and store built solo</small>
             </div>
           </article>
         </div>
@@ -571,8 +667,9 @@
               <div>
                 <h3>Frame the work</h3>
                 <p>
-                  Turn stakeholder goals, technical constraints, and campaign
-                  needs into a clear roadmap.
+                  Define requirements directly with stakeholders &mdash; from
+                  scoping ad delivery workflows with RevTech and AdOps to
+                  building the business case for dedicated infrastructure.
                 </p>
               </div>
             </li>
@@ -581,8 +678,9 @@
               <div>
                 <h3>Design the architecture</h3>
                 <p>
-                  Build systems that scale across experience layers, channels,
-                  data, and production teams.
+                  Design the data contracts between LLMs, builders, and
+                  renderers &mdash; the pattern behind Generator Generator and
+                  BF Island.
                 </p>
               </div>
             </li>
@@ -591,8 +689,9 @@
               <div>
                 <h3>Ship with quality</h3>
                 <p>
-                  Bring product, engineering, and launches together through
-                  reliable technical execution and quality assurance.
+                  Deliver production systems used at scale, from four AI
+                  quizzes shipped on a CEO-driven deadline to builder tools
+                  used to create tens of thousands of pieces of content.
                 </p>
               </div>
             </li>

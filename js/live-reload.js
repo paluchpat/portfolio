@@ -1,5 +1,7 @@
 (function () {
-  if (window.__portfolioLiveReload === true || !window.EventSource) {
+  const isLocalDev = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+
+  if (!isLocalDev || window.__portfolioLiveReload === true || !window.EventSource) {
     return;
   }
 
