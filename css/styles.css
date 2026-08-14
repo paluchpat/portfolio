@@ -224,7 +224,7 @@ button:focus-visible {
 }
 
 .hero {
-  padding: clamp(72px, 10vw, 126px) 0 72px;
+  padding: clamp(72px, 10vw, 126px) 0 44px;
 }
 
 .hero-grid {
@@ -530,7 +530,7 @@ button:focus-visible {
 }
 
 .section {
-  padding: 112px 0;
+  padding: 80px 0;
 }
 
 .section-title {
