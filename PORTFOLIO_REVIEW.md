@@ -9,6 +9,7 @@ Updated September 23, 2026. This replaces the earlier review and its emphasis on
 - Shortened the experience timeline; moved project details into the project section.
 - Made BF Island the first project, including why it mattered to Pat, his web engineering role, the relationship to Generator Generator, and the decision to use user-written messages for a meme format.
 - Kept BuzzFeed Custom Ad Tools separate from the Angular/Laravel campaign CMS at Complex.
+- Added BAM Jumbotron Builder between Custom Ad Tools and Catalyst Creator, based on Pat's account of proposing and building it with RevTech and AdOps.
 - Separated Catalyst Creator's publisher-network scope from the custom campaign portfolio. The copy no longer implies all campaigns ran across the entire network.
 - Added concrete advertising examples and the story of sharing reusable ad templates with other engineers.
 - Added concise Infinity Quizzes, Coca-Cola DreamWorld, and Rap Brackets descriptions.
@@ -23,6 +24,7 @@ The revision uses the existing portfolio, Pat's campaign descriptions, and his o
 
 - **Leadership:** Pat led engineering projects and collaborated with other teams. The copy does not claim he managed or led all those teams.
 - **BF Island:** Pat described this as his favorite project and a nearly two-year, multi-team effort. The new copy identifies his role as web engineering lead.
+- **BAM Jumbotron Builder:** Pat proposed and built a builder directly in BuzzFeed Ad Manager so AdOps could create Jumbotrons themselves. The usual separate BuzzFeed Format Platform form took 4–8 weeks, followed by 3–4 weeks of BAM integration. The stated saving is the skipped 4–8-week BFP stage, not the entire development timeline. Cloning the builder for other formats is described as a design capability, without claiming measured savings or adoption for those later formats. Continued use at BuzzFeed is based on Pat's current account.
 - **Reuse:** Removed general claims that recent projects improved work for engineers who came afterward. Retained concrete component/configuration work and the Complex template-sharing example.
 - **Mentoring:** Included candidate review, interview exercises, interviews, onboarding, and helping engineers with programming problems.
 - **Infinity Quizzes:** Four quizzes delivered over four to five weeks, based on Pat's project notes. The copy acknowledges learning the existing architecture with help from an engineering leader.
