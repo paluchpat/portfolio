@@ -340,17 +340,6 @@ button:focus-visible {
   padding: 28px;
 }
 
-.profile-card::before {
-  position: absolute;
-  top: -90px;
-  right: -90px;
-  width: 240px;
-  height: 240px;
-  border: 1px solid var(--line);
-  border-radius: 50%;
-  content: "";
-}
-
 .profile-header {
   position: relative;
   z-index: 1;
@@ -365,32 +354,6 @@ button:focus-visible {
   font-family: "Playfair Display", Georgia, serif;
   font-size: 1.8rem;
   line-height: 1.1;
-}
-
-.status-dot {
-  display: inline-flex;
-  flex: 0 0 auto;
-  align-items: center;
-  gap: 8px;
-  color: var(--text-soft);
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.status-dot > span {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 4px var(--accent-soft);
-}
-
-@media (min-width: 541px) {
-  .profile-header .status-dot {
-    margin-top: 6px;
-  }
 }
 
 .profile-visual {
@@ -523,10 +486,6 @@ button:focus-visible {
   letter-spacing: 0.1em;
   line-height: 1.5;
   text-transform: uppercase;
-}
-
-.metric-estimate {
-  opacity: 0.58;
 }
 
 .section {
@@ -959,6 +918,27 @@ button:focus-visible {
 
 .contact-section {
   padding-bottom: 112px;
+}
+
+.independent-apps p {
+  margin-top: 20px;
+  color: var(--text-soft);
+  font-size: 0.88rem;
+}
+
+.text-link,
+.text-link:visited {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: color 160ms ease;
+}
+
+.text-link:hover,
+.text-link:focus-visible {
+  color: var(--text);
 }
 
 .contact-panel {
