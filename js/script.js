@@ -82,10 +82,12 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 });
 
 window.addEventListener('load', () => {
-  const id = window.location.hash.slice(1);
+  const requestedId = window.location.hash.slice(1);
+  const id = { work: 'projects', capabilities: 'tools' }[requestedId] || requestedId;
   const target = id ? document.getElementById(id) : null;
 
   if (target) {
+    if (id !== requestedId) history.replaceState(null, '', `#${id}`);
     requestAnimationFrame(() => scrollToTarget(target));
   }
 });
