@@ -111,3 +111,43 @@ if ('IntersectionObserver' in window && sectionLinks.size > 0) {
 
   observedSections.forEach((section) => observer.observe(section));
 }
+
+// Track interactions in one place so links added later are covered too.
+document.addEventListener('click', (event) => {
+  const target = event.target instanceof Element ? event.target : event.target?.parentElement;
+  const control = target?.closest('a[href], button');
+  if (!control || typeof window.gtag !== 'function') return;
+
+  let elementArea = 'page';
+  if (control.closest('header')) elementArea = 'header';
+  else if (control.closest('footer')) elementArea = 'footer';
+  else {
+    elementArea = control.closest('section')?.getAttribute('aria-labelledby')?.replace(/-title$/, '') || 'page';
+  }
+
+  let elementType = 'link';
+  if (control.matches('.main-nav a')) elementType = 'menu_item';
+  else if (control.tagName === 'BUTTON') elementType = 'button';
+  else if (control.matches('.btn')) elementType = 'button_link';
+
+  let label = control.getAttribute('aria-label') || control.textContent;
+  if (control === navToggle) {
+    label = control.getAttribute('aria-expanded') === 'true' ? 'Open navigation' : 'Close navigation';
+  }
+
+  const parameters = {
+    element_area: elementArea,
+    element_type: elementType,
+    element_label: label.replace(/↗/g, '').replace(/\s+/g, ' ').trim(),
+  };
+
+  if (control.tagName === 'A') {
+    const href = control.getAttribute('href');
+    if (href.startsWith('#')) parameters.destination = href;
+    else if (href.startsWith('mailto:')) parameters.destination = 'email';
+    else if (href.startsWith('tel:')) parameters.destination = 'phone';
+    else parameters.destination = control.hostname || 'other';
+  }
+
+  window.gtag('event', 'portfolio_click', parameters);
+});
