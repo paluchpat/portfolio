@@ -1,5 +1,17 @@
 # Portfolio content review
 
+## BF Island product additions — September 30, 2026
+
+- Added a short product introduction to the BF Island case study, with links to its web discovery page and iOS App Store listing.
+- Added a screenshot of Discover and two linked examples from the current public product: Miniaturize My Photo (photo and setting inputs) and Tarot Card Generator (text and art-style inputs).
+- Removed the screenshots and screenshot-specific links at the user's request; the web and iOS product links remain in the case-study heading.
+- Captured the three images from the live website and stored them locally. The example cards describe product features; they do not claim Pat authored those individual generators or their artwork.
+- Kept Pat's existing web engineering role, collaboration with iOS, and project history. The App Store description provides context for group chats and iMessage stickers, not evidence of native iOS implementation by Pat.
+- Sources: https://www.bfisland.com/discover, https://www.bfisland.com/generator/210637, https://www.bfisland.com/generator/198852, and https://apps.apple.com/us/app/buzzfeed-island/id6743228929.
+- No publication or deployment was performed.
+
+## Previous content revision
+
 Updated September 24, 2026. This replaces the earlier review and its emphasis on generic “Staff impact” and making every future launch easier.
 
 ## What changed
